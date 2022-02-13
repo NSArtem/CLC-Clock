@@ -12,8 +12,8 @@ public class Clock: MonoBehaviour
 
     void SetTime() {
         var time = DateTime.Now;
-        hourPivot.localRotation = Quaternion.Euler(0, 0, -30 * time.Hour);
-        minutesPivot.localRotation = Quaternion.Euler(0, 0, -6 * time.Minute);
-        secondsPivot.localRotation = Quaternion.Euler(0, 0, -6 * time.Second);
+        hourPivot.localRotation = Quaternion.Euler(0f, 0f, -30f * time.Hour + (-30f / 60 * time.Minute));
+        minutesPivot.localRotation = Quaternion.Euler(0f, 0f, -6f * time.Minute);
+        secondsPivot.localRotation = Quaternion.Euler(0f, 0f, -6f * time.Second);
     }
 }
